@@ -23,11 +23,91 @@
 
         // alert("texto 1 "+"texto 2 "+"texto 3")
 
-        let a = Number(window.prompt("Digite o primeiro numero"));
-        let b = Number(prompt("Digite o segundo numero"));
-        let c = Number(prompt("Digite o terceiro numero"));
-        media = (a+b+c)/3;
-        alert("sua média é: "+media);
+        // let a = Number(window.prompt("Digite o primeiro numero"));
+        // let b = Number(prompt("Digite o segundo numero"));
+        // let c = Number(prompt("Digite o terceiro numero"));
+        // media = (a+b+c)/3;
+        // alert("sua média é: "+media);
+
+        // media >= 7 ? 
+        //     c >= 8 ? alert("Você está aprovado") 
+        //     : alert("Você está de recuperação") 
+        // : alert("Você está reprovado")
+
+        // switch (media) {
+        //     case 0:
+        //         alert("Você foi reprovado com a pior nota possível! Vá estudar!")
+        //         break;
+        
+        //     case 1:
+        //         alert("Você foi reprovado com a segunda pior nota possível! Vá estudar também!")
+        //         break;
+        
+        //     case 2:
+        //         alert("Você foi reprovado com a terceira pior nota possível! Vá estudar também!")
+        //         break;
+        
+        //     case 3:
+        //         alert("Você foi reprovado igual aos outros! Vá estudar também!")
+        //         break;
+        
+        //     case 4:
+        //         alert("Você foi reprovado mas pode melhorar! Continue estudando!")
+        //         break;
+        
+        //     case 5:
+        //         alert("Você foi reprovado mas tem potencial! Vá estudar também!")
+        //         break;
+        
+        //     case 6:
+        //         alert("Você foi reprovado mas quase chegou lá! Estude mais um pouco!")
+        //         break;
+        
+        //     case 7:
+        //         if (c>=8) {
+        //             alert("Você foi APROVADO, mas se arrastando!")
+        //         } else {
+        //             alert("Você está de recuperação! Precisava tirar mais de 8 na última prova.")
+        //         }
+        //         break;
+        
+        //     case 8:
+        //         if (c>=8) {
+        //             alert("Você foi APROVADO, muito bem!")
+        //         } else {
+        //             alert("Você está de recuperação! Como que tu tira 8 de média e não tira 8 no final?")
+        //         }
+        //         break;
+        
+        //     case 9:
+        //         if (c>=8) {
+        //             alert("Você foi APROVADO quase perfeitamente!")
+        //         } else {
+        //             alert("Você está de recuperação! Não é possível que não tirou uma nota maior que 8 na última prova")
+        //         }
+        //         break;
+        
+        //     case 10:
+        //         if (c>=8) {
+        //             alert("Você foi APROVADO com glória!")
+        //         } else {
+        //             alert("Você está de recuperação! Dormiu, foi?")
+        //         }
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+
+        // let diadasemana;
+
+        // for (let index = 7; index >= 1; index--) {
+        //     diadasemana=prompt("Qual o "+index+"º dia da semana?")
+        // }
+
+        let numerodenotas=prompt("Quantas notas vão ser?"),somadasnotas=0;
+        for (let index = 1; index <= numerodenotas; index++) somadasnotas+=Number(prompt("Qual a "+index+"ª nota?"))
+        alert("A média das "+numerodenotas+" notas é "+(somadasnotas/numerodenotas))
 
     </script>
 </body>
