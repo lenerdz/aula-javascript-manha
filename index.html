@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+    </style>
 </head>
 <body>
     <script>
@@ -105,10 +108,29 @@
         //     diadasemana=prompt("Qual o "+index+"º dia da semana?")
         // }
 
-        let numerodenotas=prompt("Quantas notas vão ser?"),somadasnotas=0;
-        for (let index = 1; index <= numerodenotas; index++) somadasnotas+=Number(prompt("Qual a "+index+"ª nota?"))
-        alert("A média das "+numerodenotas+" notas é "+(somadasnotas/numerodenotas))
+        // let quantasnotas=prompt("Quantas notas você quer digitar?"), soma=0
+        // for (let index = 1; index <= quantasnotas; index++) {
+        //     let numerodigitado=Number(prompt("Qual a "+index+"ª nota?"))
+        //     soma = soma + numerodigitado
+        // }
+        // let media = soma/quantasnotas
+        // alert("Sua média é: "+media)
 
+        // let idades = [33, 21, 7, 48, 51, 3]
+        // let frutas = ["Banana", "Maçã", "Uva", "Laranja", "Jaca"]
+        // frutas[5] = "Pêra"
+        // alert(frutas)
+
+        function media(soma, numeros) {
+            return soma/numeros;
+        }
+
+        function ehdivisivel(primeironumero, segundonumero) {
+            if(primeironumero%segundonumero==0) return true
+            else return false
+        }
+
+        alert(ehdivisivel(52, 2))
     </script>
 </body>
 </html>
