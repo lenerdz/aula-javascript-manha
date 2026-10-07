@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #minhadiv {
+            background-color: pink;
+            height: 300px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="minhadiv"></div>
+    <input type="text" id="campo-texto">
+    <button id="meu-botao">Mudar Texto</button>
+    <script>
+        // let numero = "SETE"
+        let divrosa = document.querySelector("#minhadiv");
+        let textoinput = document.querySelector("#campo-texto")
+        console.log(divrosa);
+
+        minhafuncao = function mudartexto() {
+            // divrosa.textContent = prompt("Digite o nome desejado: ")
+            divrosa.textContent = textoinput.value;
+        }
+        
+        let botao = document.querySelector("#meu-botao")
+        console.log(botao);
+        botao.addEventListener("click", minhafuncao)
+        
+        
+    </script>
+</body>
+</html>

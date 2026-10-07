@@ -124,13 +124,21 @@
         function media(soma, numeros) {
             return soma/numeros;
         }
-
-        function ehdivisivel(primeironumero, segundonumero) {
-            if(primeironumero%segundonumero==0) return true
-            else return false
+        
+        let notas = [], quantasnotas = Number(prompt("Quantas notas você quer digitar?")), somadasnotas = 0
+        for (let index = 1; index <= quantasnotas; index++) {
+            notas[index-1] = Number(prompt("Qual a "+index+"ª nota?"))
+            somadasnotas += notas[index-1]
+            // somadasnotas = somadasnotas+notas[index-1]
         }
+        alert("Suas notas foram: "+notas+". E sua média foi: "+media(somadasnotas,quantasnotas))
+        
+        // function ehdivisivel(primeironumero, segundonumero) {
+        //     if(primeironumero%segundonumero==0) return true
+        //     else return false
+        // }
 
-        alert(ehdivisivel(52, 2))
+        // alert(ehdivisivel(52, 2))
     </script>
 </body>
 </html>
