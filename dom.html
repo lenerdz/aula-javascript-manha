@@ -7,31 +7,121 @@
     <style>
         #minhadiv {
             background-color: pink;
-            height: 300px;
-            width: 200px;
+            min-height: 300px;
+            width: 300px;
+            padding: 10px;
+        }
+        .item-lista {
+            background-color: aquamarine;
+            padding: 5px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <div id="minhadiv"></div>
-    <input type="text" id="campo-texto">
-    <button id="meu-botao">Mudar Texto</button>
+    <div id="minhadiv">
+        <form action="#" method="post">
+            <input type="text" id="campo-texto">
+            <button id="meu-botao" type="submit">Mudar Texto</button>
+        </form>
+    </div>
     <script>
-        // let numero = "SETE"
         let divrosa = document.querySelector("#minhadiv");
         let textoinput = document.querySelector("#campo-texto")
         console.log(divrosa);
 
-        minhafuncao = function mudartexto() {
+        minhafuncao = function mudartexto(evento) {
             // divrosa.textContent = prompt("Digite o nome desejado: ")
-            divrosa.textContent = textoinput.value;
+            evento.preventDefault();
+            let novadiv = document.createElement("div")
+            novadiv.textContent = textoinput.value;
+            novadiv.classList.add("item-lista")
+            novadiv.style.marginLeft = "30px";
+            divrosa.append(novadiv)
         }
         
         let botao = document.querySelector("#meu-botao")
         console.log(botao);
         botao.addEventListener("click", minhafuncao)
+
+        // let aluno = {
+        //     nome: "Leonardo",
+        //     idade: 39,
+        //     curso: "Fullstack",
+        //     turno: "Manhã",
+        //     data_de_inicio: "09/09/2026"
+        // }
+
+        let alunos = [
+            {
+            nome: "Leonardo",
+            idade: 39,
+            curso: "Fullstack",
+            turno: "Manhã",
+            data_de_inicio: "09/09/2026"
+            },
+            {
+            nome: "Davi",
+            idade: 19,
+            curso: "Fullstack",
+            turno: "Manhã",
+            data_de_inicio: "09/09/2026"
+            },
+            {
+            nome: "Carlos",
+            idade: 24,
+            curso: "IA",
+            turno: "Manhã",
+            data_de_inicio: "09/09/2026"
+            },
+            {
+            nome: "Debora",
+            idade: 22,
+            curso: "Fullcycle",
+            turno: "Manhã",
+            data_de_inicio: "09/09/2026"
+            },
+            {
+            nome: "Mariana",
+            idade: 35,
+            curso: "IA",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026"
+            },
+            {
+            nome: "Roberto",
+            idade: 59,
+            curso: "IA",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026"
+            },
+            {
+            nome: "Matheus",
+            idade: 33,
+            curso: "fullcycle",
+            turno: "Tarde",
+            data_de_inicio: "09/09/2026"
+            },
+        ]
+
+        console.log(alunos);
+        // for (let index = 0; index < alunos.length; index++) {
+        //     alert(alunos[index].nome)
+        // }
+        // let mostrartodososnomes = function mostrarnome(aluno) {
+        //     alert(aluno.nome)
+        // }
+        // alunos.forEach(mostrartodososnomes)
         
+
         
+        // let listartodososnomes = function filtrarosnomes(aluno) {
+        //     return aluno.idade
+        // }
+        // alert(alunos.map(listartodososnomes))
+
+        alert(alunos.map( (aluno) => aluno.curso ))
+
     </script>
 </body>
 </html>
