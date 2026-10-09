@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
             width: 300px;
             padding: 10px;
         }
+
         .item-lista {
             background-color: aquamarine;
             padding: 5px;
@@ -18,6 +20,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="minhadiv">
         <form action="#" method="post">
@@ -39,7 +42,7 @@
             novadiv.style.marginLeft = "30px";
             divrosa.append(novadiv)
         }
-        
+
         let botao = document.querySelector("#meu-botao")
         console.log(botao);
         botao.addEventListener("click", minhafuncao)
@@ -54,53 +57,53 @@
 
         let alunos = [
             {
-            nome: "Leonardo",
-            idade: 39,
-            curso: "Fullstack",
-            turno: "Manhã",
-            data_de_inicio: "09/09/2026"
+                nome: "Leonardo",
+                idade: 39,
+                curso: "Fullstack",
+                turno: "Manhã",
+                data_de_inicio: "09/09/2026"
             },
             {
-            nome: "Davi",
-            idade: 19,
-            curso: "Fullstack",
-            turno: "Manhã",
-            data_de_inicio: "09/09/2026"
+                nome: "Davi",
+                idade: 19,
+                curso: "Fullstack",
+                turno: "Manhã",
+                data_de_inicio: "09/09/2026"
             },
             {
-            nome: "Carlos",
-            idade: 24,
-            curso: "IA",
-            turno: "Manhã",
-            data_de_inicio: "09/09/2026"
+                nome: "Carlos",
+                idade: 24,
+                curso: "IA",
+                turno: "Manhã",
+                data_de_inicio: "09/09/2026"
             },
             {
-            nome: "Debora",
-            idade: 22,
-            curso: "Fullcycle",
-            turno: "Manhã",
-            data_de_inicio: "09/09/2026"
+                nome: "Debora",
+                idade: 22,
+                curso: "Fullcycle",
+                turno: "Manhã",
+                data_de_inicio: "09/09/2026"
             },
             {
-            nome: "Mariana",
-            idade: 35,
-            curso: "IA",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026"
+                nome: "Mariana",
+                idade: 35,
+                curso: "IA",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026"
             },
             {
-            nome: "Roberto",
-            idade: 59,
-            curso: "IA",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026"
+                nome: "Roberto",
+                idade: 59,
+                curso: "IA",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026"
             },
             {
-            nome: "Matheus",
-            idade: 33,
-            curso: "fullcycle",
-            turno: "Tarde",
-            data_de_inicio: "09/09/2026"
+                nome: "Matheus",
+                idade: 33,
+                curso: "fullcycle",
+                turno: "Tarde",
+                data_de_inicio: "09/09/2026"
             },
         ]
 
@@ -112,16 +115,39 @@
         //     alert(aluno.nome)
         // }
         // alunos.forEach(mostrartodososnomes)
-        
 
-        
+
+
         // let listartodososnomes = function filtrarosnomes(aluno) {
         //     return aluno.idade
         // }
         // alert(alunos.map(listartodososnomes))
 
-        alert(alunos.map( (aluno) => aluno.curso ))
+        // alert(alunos.map( (aluno) => aluno.curso ) )
 
+        console.log(alunos.filter((aluno) => aluno.curso == "IA"))
+
+        let alunonovo = {
+            nome: "Daniel",
+            idade: 15,
+            curso: "Fullcycle",
+            turno: "Noite",
+            data_de_inicio: "09/10/2026"
+        }
+        // alunos[alunos.length] = alunonovo;
+        alunos.push(alunonovo)
+        alunos.push({
+            nome: "Edilson",
+            idade: 30,
+            curso: "Fullcycle",
+            turno: "Tarde",
+            data_de_inicio: "09/10/2026"
+        })
+        console.log(alunos)
+
+        let alunoexcluido = alunos.pop()
+        console.log(alunoexcluido)
     </script>
 </body>
+
 </html>
